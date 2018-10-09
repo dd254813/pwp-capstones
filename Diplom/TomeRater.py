@@ -66,6 +66,9 @@ class Book:
 
     def __hash__(self):
         return hash((self.title, self.isbn))
+    
+    def __repr__(self):
+        return ("{title}".format(title=self.title))
 
 class Fiction(Book):
     def __init__(self, title, author, isbn, price):
